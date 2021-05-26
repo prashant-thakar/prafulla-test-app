@@ -1,0 +1,49 @@
+.header-menu {
+    .navbar-toggler {
+        border: 0;
+        margin-bottom: 0.5rem;
+    }
+    .navbar-collapse {
+        position: absolute;
+        top: 112px;
+        background: #394955;
+        left: -15px;
+        right: -15px;
+        z-index: 5;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+        border-right: 0;
+        padding: 0.6rem 2rem 0.8rem;
+        color: white;
+        border-bottom: 2px solid white;
+        &:hover {
+            background-color: #e22323;
+        }
+        &.active {
+            background-color: #e22323;
+        }
+        &.logout {
+            background-color: #131e2e;
+        }
+    }
+    .m-menu {
+        .carousel-item {
+            text-align: center;
+            padding: 0.5rem 0 1.2rem;
+        }
+        .carousel-indicators {
+            bottom: -10px;
+            li {
+                width: 10px;
+                height: 10px;
+                border: 0;
+                border-radius: 50%;
+                background-color: #bcbcbe;
+                opacity: 1;
+                &.active {
+                    background-color: #548db4;
+                }
+            }
+        }
+    }
+}

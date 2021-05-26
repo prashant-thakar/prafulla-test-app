@@ -1,0 +1,9 @@
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./Desktop.scss";
+
+@media (max-width: 640px) {
+  @import "./Mobile.scss";
+}
+@media (max-width: 768px) {
+  @import url("./Tablet.scss");
+}
