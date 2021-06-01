@@ -1,74 +1,132 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-        "Droid Sans", "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .header-menu {
-    .top-section {
-        background-color: #131e2e;
-        padding: 10px 0;
-        color: white;
-        a {
-            color: white;
-            display: inline-block;
-            padding: 0 0.5rem;
-        }
+  .top-section {
+    background-color: #131e2e;
+    padding: 10px 0;
+    color: white;
+    a {
+      color: white;
+      display: inline-block;
+      padding: 0 0.5rem;
     }
-    .bottom-section {
-        background-color: #3a4855;
+  }
+  .bottom-section {
+    background-color: #3a4855;
+  }
+  .navbar {
+    padding-top: 0.8rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+  .navbar-nav {
+    border-left: 1px solid white;
+  }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    border-right: 1px solid white;
+    padding: 0.6rem 2rem 0.8rem;
+    color: white;
+    &:hover {
+      border-bottom: 0.3rem solid #e22323;
     }
-    .navbar {
-        padding-top: 0.8rem;
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 0;
+    &.active {
+      border-bottom: 0.3rem solid #e22323;
     }
-    .navbar-nav {
-        border-left: 1px solid white;
+  }
+  .navbar-brand {
+    background-color: #e22323;
+    position: absolute;
+    top: -44px;
+    bottom: 0;
+    align-items: center;
+    display: flex;
+    padding: 0 0.3rem;
+    img {
+      width: 120px;
     }
-    .navbar-expand-lg .navbar-nav .nav-link {
-        border-right: 1px solid white;
-        padding: 0.6rem 2rem 0.8rem;
-        color: white;
+  }
+  .secondery-menu {
+    background-color: #e1e5ea;
+    .d-menu {
+      a {
+        display: inline-block;
+        padding: 0.8rem 1rem;
+        color: #4a4552;
         &:hover {
-            border-bottom: 0.3rem solid #e22323;
+          text-decoration: none;
+          color: #4a4552;
+          padding-bottom: 0.5rem;
+          border-bottom: 0.3rem solid #b11818;
         }
         &.active {
-            border-bottom: 0.3rem solid #e22323;
+          padding-bottom: 0.5rem;
+          border-bottom: 0.3rem solid #b11818;
         }
+      }
     }
-    .navbar-brand {
-        background-color: #e22323;
-        position: absolute;
-        top: -44px;
-        bottom: 0;
-        align-items: center;
-        display: flex;
-        padding: 0 0.3rem;
-        img {
-            width: 120px;
-        }
-    }
-    .secondery-menu {
-        background-color: #e1e5ea;
-        .d-menu {
-            a {
-                display: inline-block;
-                padding: 0.8rem 1rem;
-                color: #4a4552;
-                &:hover {
-                    text-decoration: none;
-                    color: #4a4552;
-                    padding-bottom: .5rem;
-                    border-bottom: 0.3rem solid #b11818;
-                }
-                &.active {
-                    padding-bottom: .5rem;
-                    border-bottom: 0.3rem solid #b11818;
-                }
-            }
-        }
-    }
+  }
+}
+
+.right-holder {
+  background: rebeccapurple;
+  top: 0;
+  right: 0;
+  width: 30%;
+  position: fixed;
+  height: 100vh;
+  z-index: 5;
+  -webkit-animation: slideOut 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slideOut 0.5s forwards;
+  .btn-handle {
+    position: absolute;
+    background: red;
+    line-height: 0;
+    padding: 10px !important;
+    top: calc(50vh - 10px);
+    left: -38px;
+  }
+  &.animate-in {
+    transform: translate(100%);
+    -webkit-animation: slideIn 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slideIn 0.5s forwards;
+  }
+
+  &.animate-out {
+    -webkit-animation: slideOut 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slideOut 0.5s forwards;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  100% {
+    right: 30%;
+  }
+}
+
+@keyframes slideIn {
+  100% {
+    right: 30%;
+  }
+}
+
+@-webkit-keyframes slideOut {
+  100% {
+    right: -30%;
+  }
+}
+
+@keyframes slideOut {
+  100% {
+    right: -30%;
+  }
 }
